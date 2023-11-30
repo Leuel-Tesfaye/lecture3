@@ -8,10 +8,15 @@ from django.shortcuts import render
 
 def index(request):
     # return HttpResponse("Hello, python !")
-    return render (request, "hello/index.html")
+    return render (request, "hello/index.html") #? rendering the html file
 def testing(request):
     return HttpResponse('This is testing another view function')
 
 def routing(request):
     return HttpResponse("This message is response of routing function")
+
+def greet (request, name):
+    return render (request, "hello/greet.html", {
+        "name" : name.capitalize()
+    })
 
