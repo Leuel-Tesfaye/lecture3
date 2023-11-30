@@ -4,5 +4,7 @@ from . import views
 #? accessed for this particular app 
 
 urlpatterns = [
-    path("", views.index, name ="index")
+    path("", views.index, name ="index"),
+    path("testing", views.testing, name = "testing"),
+    path("routing", views.routing, name = "routing")
 ]

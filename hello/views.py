@@ -7,5 +7,11 @@ from django.shortcuts import render
 #? the HTTP request that the user made in order to access our web server
 
 def index(request):
-    return HttpResponse("Hello, World !")
+    # return HttpResponse("Hello, python !")
+    return render (request, "hello/index.html")
+def testing(request):
+    return HttpResponse('This is testing another view function')
+
+def routing(request):
+    return HttpResponse("This message is response of routing function")
 
